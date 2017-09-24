@@ -49,7 +49,7 @@ including those the countries/regions that do not belong to any territory.*/
 
 Select t.TerritoryID, t.Name as Region, p.Name as Country 
 From (Sales.SalesTerritory  as t 
-full join Person.CountryRegion as p on t.CountryRegionCode=p.CountryRegionCode)
+right outer join Person.CountryRegion as p on t.CountryRegionCode=p.CountryRegionCode)
 
 
 /*6, Find out the average of the total dues of all the orders.*/
